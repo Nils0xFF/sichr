@@ -1,0 +1,37 @@
+{
+  "name": "password-cli",
+  "version": "1.0.0",
+  "description": "A simple CLI tool to analyze password strength and generate secure passwords",
+  "license": "ISC",
+  "author": "Nils0xFF",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx --watch src/index.ts",
+    "dev:validate": "tsx --watch src/index.ts validate",
+    "dev:generate": "tsx --watch src/index.ts generate",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.10",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^26.2.0",
+    "@typescript/native": "npm:typescript@^7.0.2",
+    "jest": "^30.4.2",
+    "ts-jest": "^29.4.12",
+    "tsx": "^4.23.12",
+    "typescript": "npm:@typescript/typescript6@^6.0.2"
+  },
+  "dependencies": {
+    "@optique/core": "^1.2.2",
+    "@optique/discover": "^1.2.2",
+    "@optique/inquirer": "^1.2.2",
+    "@optique/run": "^1.2.2"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "unrs-resolver@1.12.2": true
+  }
+}
