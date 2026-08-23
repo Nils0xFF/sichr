@@ -12,7 +12,7 @@
     "dev:validate": "tsx --watch src/index.ts validate",
     "dev:generate": "tsx --watch src/index.ts generate",
     "build": "tsc",
-    "start": "node dist/index.js",
+    "start": "tsc && node dist/index.js",
     "test": "node --experimental-vm-modules node_modules/.bin/jest",
     "release": "release-it"
   },
