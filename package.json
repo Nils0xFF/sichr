@@ -16,8 +16,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "sichr": "./dist/index.js",
-    "@nils0xff/sichr": "./dist/index.js"
+    "sichr": "dist/index.js"
   },
   "files": [
     "dist"
