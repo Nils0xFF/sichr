@@ -13,11 +13,14 @@
   "license": "MIT",
   "author": "Nils Geschwinde",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "sichr": "dist/index.js"
+    "sichr": "./dist/index.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "tsx --watch src/index.ts",
     "dev:validate": "tsx --watch src/index.ts validate",
