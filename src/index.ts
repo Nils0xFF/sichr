@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { message, commandLine, type Mode } from "@optique/core";
 import { run } from "@optique/run";
 

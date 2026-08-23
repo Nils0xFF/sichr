@@ -15,6 +15,9 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
+  "bin": {
+    "sichr": "dist/index.js"
+  },
   "scripts": {
     "dev": "tsx --watch src/index.ts",
     "dev:validate": "tsx --watch src/index.ts validate",
