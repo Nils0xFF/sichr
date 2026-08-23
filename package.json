@@ -2,11 +2,19 @@
   "name": "@nils0xff/sichr-cli",
   "version": "0.1.1",
   "description": "A simple CLI tool to analyze password strength and generate secure passwords",
+  "homepage": "https://github.com/Nils0xFF/sichr#readme",
+  "bugs": {
+    "url": "https://github.com/Nils0xFF/sichr/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nils0xFF/sichr.git"
+  },
   "license": "MIT",
   "author": "Nils Geschwinde",
   "type": "module",
   "main": "dist/index.js",
-  "private": "false",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "tsx --watch src/index.ts",
     "dev:validate": "tsx --watch src/index.ts validate",
@@ -15,6 +23,12 @@
     "start": "tsc && node dist/index.js",
     "test": "node --experimental-vm-modules node_modules/.bin/jest",
     "release": "release-it"
+  },
+  "dependencies": {
+    "@optique/core": "^1.2.2",
+    "@optique/discover": "^1.2.2",
+    "@optique/inquirer": "^1.2.2",
+    "@optique/run": "^1.2.2"
   },
   "devDependencies": {
     "@types/inquirer": "^9.0.10",
@@ -27,12 +41,6 @@
     "ts-node": "^10.9.2",
     "tsx": "^4.23.12",
     "typescript": "npm:@typescript/typescript6@^6.0.2"
-  },
-  "dependencies": {
-    "@optique/core": "^1.2.2",
-    "@optique/discover": "^1.2.2",
-    "@optique/inquirer": "^1.2.2",
-    "@optique/run": "^1.2.2"
   },
   "allowScripts": {
     "esbuild@0.28.2": true,
