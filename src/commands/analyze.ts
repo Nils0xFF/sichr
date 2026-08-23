@@ -1,4 +1,4 @@
-import { argument, constant, message, object, string } from "@optique/core";
+import { argument, message, object, string } from "@optique/core";
 import { defineCommand } from "@optique/discover";
 import { prompt } from "@optique/inquirer";
 import { analyzePassword } from "../utils/analyze-password.ts";

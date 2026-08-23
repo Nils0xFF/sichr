@@ -1,5 +1,3 @@
-import { WIDELY_SUPPORTED_SYMBOLS } from "./charsets.ts";
-
 export type PasswordAnalysis = PartialAnalysis & {
   rawScore: number;
   strength: "weak" | "medium" | "strong";

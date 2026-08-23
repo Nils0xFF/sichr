@@ -1,4 +1,4 @@
-import { message, commandLine } from "@optique/core";
+import { message, commandLine, type Mode } from "@optique/core";
 import { run } from "@optique/run";
 
 import { runProgram, type StaticCommand } from "@optique/discover";
@@ -30,7 +30,8 @@ async function startInteractiveMode() {
   // console.clear();
   console.log(styleText("bold", "Welcome to password-cli!"));
 
-  let commandChoice = await select<StaticCommand<any, any> | null>({
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const commandChoice = await select<StaticCommand<Mode, any> | null>({
     message: styleText("underline", "What do you want to do?"),
     choices: [
       {
@@ -53,7 +54,8 @@ async function startInteractiveMode() {
   executeCommand(commandChoice);
 }
 
-async function executeCommand(commandChoice: StaticCommand<any, any> | null) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+async function executeCommand(commandChoice: StaticCommand<Mode, any> | null) {
   if (commandChoice !== null) {
     const value = await run(commandChoice.parser);
     await commandChoice.handler(value);

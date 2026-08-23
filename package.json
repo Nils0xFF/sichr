@@ -19,6 +19,7 @@
     "dev": "tsx --watch src/index.ts",
     "dev:validate": "tsx --watch src/index.ts validate",
     "dev:generate": "tsx --watch src/index.ts generate",
+    "lint": "npx eslint src",
     "build": "tsc",
     "start": "tsc && node dist/index.js",
     "test": "node --experimental-vm-modules node_modules/.bin/jest",
@@ -31,16 +32,21 @@
     "@optique/run": "^1.2.2"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/inquirer": "^9.0.10",
     "@types/jest": "^30.0.0",
     "@types/node": "^26.2.0",
     "@typescript/native": "npm:typescript@^7.0.2",
+    "eslint": "^10.9.0",
+    "eslint-config-prettier": "^10.1.8",
     "jest": "^30.4.2",
+    "prettier": "3.9.6",
     "release-it": "^21.0.2",
     "ts-jest": "^29.4.12",
     "ts-node": "^10.9.2",
     "tsx": "^4.23.12",
-    "typescript": "npm:@typescript/typescript6@^6.0.2"
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
+    "typescript-eslint": "^8.67.0"
   },
   "allowScripts": {
     "esbuild@0.28.2": true,

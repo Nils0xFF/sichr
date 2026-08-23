@@ -39,16 +39,17 @@ export function analyzePassword(password: string): PasswordAnalysis {
 }
 
 function analyzePasswordLength(password: string): PartialAnalysis {
-  let { score, suggestions, warnings, hints } = initPartialAnalysis();
+  let score = 0;
+  const { suggestions, warnings, hints } = initPartialAnalysis();
 
   if (password.length < 5) {
-    score = -Infinity;
+    score += -Infinity;
     warnings.add(PasswordWarnings.TOO_SHORT);
   } else if (password.length < 10) {
-    score = -Math.min((10 - password.length) * 5, 25);
+    score += -Math.min((10 - password.length) * 5, 25);
     suggestions.add(PasswordSuggestion.LENGTH);
   } else {
-    score = Math.min((password.length - 10) * 5, 25);
+    score += Math.min((password.length - 10) * 5, 25);
   }
 
   return {
@@ -60,7 +61,8 @@ function analyzePasswordLength(password: string): PartialAnalysis {
 }
 
 function analyzePasswordCharset(password: string): PartialAnalysis {
-  let { score, suggestions, warnings, hints } = initPartialAnalysis();
+  let score = 0;
+  const { suggestions, warnings, hints } = initPartialAnalysis();
 
   // check for invalid or very insecure passwords
   if (INCLUDES_COMMONLY_REJECTED.test(password)) {
