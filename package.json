@@ -1,9 +1,9 @@
 {
-  "name": "password-cli",
-  "version": "1.0.0",
+  "name": "@nils0xff/sichr-cli",
+  "version": "0.1.0",
   "description": "A simple CLI tool to analyze password strength and generate secure passwords",
-  "license": "ISC",
-  "author": "Nils0xFF",
+  "license": "MIT",
+  "author": "Nils Geschwinde",
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
@@ -12,7 +12,8 @@
     "dev:generate": "tsx --watch src/index.ts generate",
     "build": "tsc",
     "start": "node dist/index.js",
-    "test": "node --experimental-vm-modules node_modules/.bin/jest"
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "release": "release-it"
   },
   "devDependencies": {
     "@types/inquirer": "^9.0.10",
@@ -20,6 +21,7 @@
     "@types/node": "^26.2.0",
     "@typescript/native": "npm:typescript@^7.0.2",
     "jest": "^30.4.2",
+    "release-it": "^21.0.2",
     "ts-jest": "^29.4.12",
     "tsx": "^4.23.12",
     "typescript": "npm:@typescript/typescript6@^6.0.2"
