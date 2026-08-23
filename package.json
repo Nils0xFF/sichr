@@ -1,6 +1,6 @@
 {
   "name": "@nils0xff/sichr",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A simple CLI tool to analyze password strength and generate secure passwords",
   "homepage": "https://github.com/Nils0xFF/sichr#readme",
   "bugs": {
