@@ -16,7 +16,7 @@ Here are the main features of **Sichr**:
 
 ### Requirements
 
-- Node.js >= 20 ([Download here](https://nodejs.org/en/download))
+- Node.js >= 22 ([Download here](https://nodejs.org/en/download))
 
 ### using npx
 
