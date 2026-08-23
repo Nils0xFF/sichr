@@ -6,6 +6,7 @@
   "author": "Nils Geschwinde",
   "type": "module",
   "main": "dist/index.js",
+  "private": "false",
   "scripts": {
     "dev": "tsx --watch src/index.ts",
     "dev:validate": "tsx --watch src/index.ts validate",
