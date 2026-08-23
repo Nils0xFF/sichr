@@ -31,9 +31,10 @@ jobs:
       - name: Build
         run: npm run build --if-present
 
-      - run: npm publish --access public
+      - name: Publish npm package
+        run: npm publish --access public
 
       - name: Create GitHub Release
-        run: gh release create "$GITHUB_REF_NAME" --generate-notes
+        run: gh release create "$GITHUB_REF_NAME" --verify-tag --generate-notes
         env:
           GH_TOKEN: ${{ github.token }}
